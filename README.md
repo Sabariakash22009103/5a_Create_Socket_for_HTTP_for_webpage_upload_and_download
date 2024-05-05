@@ -12,7 +12,7 @@ To write a PYTHON program for socket for HTTP for web page upload and download
 ## Program :
 ### DEVELOPED BY: Sabari Akash A
 ### REGISTER NO: 212222230124
-```
+```py
 import socket
 def send_request(host, port, request):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -30,7 +30,7 @@ def upload_file(host, port, filename):
         response = send_request(host, port, request)
     return response
 ```
-```
+```py
 def download_file(host, port, filename):
     request = f"GET /{filename} HTTP/1.1\r\nHost: {host}\r\n\r\n"
     response = send_request(host, port, request)
